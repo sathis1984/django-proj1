@@ -20,8 +20,8 @@ from crudapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',views.BookListView.as_view(),name='list'),
-    path('',views.BookListView.as_view()),
+    path('',views.BookListView.as_view(),name='list'),
+    # path('',views.BookListView.as_view()),
     path('<int:pk>/',views.BookDetailView.as_view(),name='details'),
     path('create/',views.BookCreateView.as_view()),
     path('update/<int:pk>',views.BookUpdateView.as_view()),
